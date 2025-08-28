@@ -7,6 +7,6 @@
 ### JSON format
 
 ```bash
-gendiff --format json path/to/file1.json path/to/file2.json
+gendiff --format json path/to/file1.json path/to/file2.json```
 
 [![asciicast](https://asciinema.org/a/9A4ywAmme8hQ0OYYKo0ytndbg.svg)](https://asciinema.org/a/9A4ywAmme8hQ0OYYKo0ytndbg)
