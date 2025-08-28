@@ -1,5 +1,5 @@
 TN:
-SF:src/buildAst.js
+SF:src\buildAst.js
 FN:4,(anonymous_0)
 FN:6,(anonymous_1)
 FN:9,(anonymous_2)
@@ -45,7 +45,7 @@ BRF:14
 BRH:14
 end_of_record
 TN:
-SF:src/index.js
+SF:src\index.js
 FN:8,(anonymous_0)
 FN:13,(anonymous_1)
 FN:15,(anonymous_2)
@@ -73,7 +73,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src/parsers.js
+SF:src\parsers.js
 FN:4,(anonymous_0)
 FNF:1
 FNH:1
@@ -93,7 +93,7 @@ BRF:4
 BRH:3
 end_of_record
 TN:
-SF:src/formatters/index.js
+SF:src\formatters\index.js
 FN:11,getFormatter
 FNF:1
 FNH:1
@@ -111,7 +111,7 @@ BRF:3
 BRH:1
 end_of_record
 TN:
-SF:src/formatters/json.js
+SF:src\formatters\json.js
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -123,7 +123,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/formatters/plain.js
+SF:src\formatters\plain.js
 FN:3,(anonymous_0)
 FN:11,(anonymous_1)
 FN:12,(anonymous_2)
@@ -177,7 +177,7 @@ BRF:18
 BRH:16
 end_of_record
 TN:
-SF:src/formatters/stylish.js
+SF:src\formatters\stylish.js
 FN:7,(anonymous_0)
 FN:9,(anonymous_1)
 FN:18,(anonymous_2)

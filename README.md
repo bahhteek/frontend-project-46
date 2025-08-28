@@ -9,3 +9,4 @@
 
 ```bash
 gendiff --format json path/to/file1.json path/to/file2.json
+```
