@@ -34,11 +34,8 @@ test('gendiff nested json -> format json produces valid structured diff', () => 
   const doge = pickNode(setting6.children, 'doge')
   const wow = pickNode(doge.children, 'wow')
   assert(
-    wow &&
-      wow.type === 'updated' &&
-      wow.oldValue === '' &&
-      wow.newValue === 'so much',
-    "wow updated '' -> 'so much'",
+    wow && wow.type === 'updated' && wow.oldValue === '' && wow.newValue === 'so much',
+    'wow updated \'\' -> \'so much\'',
   )
 
   const group2 = pickNode(data, 'group2')

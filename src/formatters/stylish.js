@@ -17,9 +17,9 @@ const stringify = (value, depth) => {
   return `{\n${lines.join('\n')}\n${makeIndent(depth)}}`
 }
 
-const stylish = ast => {
+const stylish = (ast) => {
   const iter = (nodes, depth) => {
-    const lines = nodes.map(node => {
+    const lines = nodes.map((node) => {
       const { type, key } = node
 
       const line = (sign, val) =>

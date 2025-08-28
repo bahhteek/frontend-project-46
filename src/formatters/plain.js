@@ -1,16 +1,16 @@
 import _ from 'lodash'
 
-const formatValue = val => {
+const formatValue = (val) => {
   if (_.isPlainObject(val) || Array.isArray(val)) return '[complex value]'
   if (val === null) return 'null'
   if (typeof val === 'boolean' || typeof val === 'number') return String(val)
-  if (typeof val === 'string') return `'${val.replace(/'/g, "\\'")}'`
+  if (typeof val === 'string') return `'${val.replace(/'/g, '\\\'')}'`
   return String(val)
 }
 
-const plain = ast => {
+const plain = (ast) => {
   const iter = (nodes, ancestry) =>
-    nodes.flatMap(node => {
+    nodes.flatMap((node) => {
       const { type, key } = node
       const path = [...ancestry, key].join('.')
 

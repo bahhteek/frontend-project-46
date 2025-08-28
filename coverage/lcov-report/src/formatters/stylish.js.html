@@ -1,64 +1,68 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Code coverage report for src/formatters/stylish.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-      .coverage-summary .sorter {
-        background-image: url(../../sort-arrow-sprite.png);
-      }
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
     </style>
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <div class="pad1">
-        <h1>
-          <a href="../../index.html">All files</a> /
-          <a href="index.html">src/formatters</a> stylish.js
-        </h1>
-        <div class="clearfix">
-          <div class="fl pad1y space-right2">
-            <span class="strong">96.29% </span>
-            <span class="quiet">Statements</span>
-            <span class="fraction">26/27</span>
-          </div>
-
-          <div class="fl pad1y space-right2">
-            <span class="strong">90.9% </span>
-            <span class="quiet">Branches</span>
-            <span class="fraction">10/11</span>
-          </div>
-
-          <div class="fl pad1y space-right2">
-            <span class="strong">100% </span>
-            <span class="quiet">Functions</span>
-            <span class="fraction">7/7</span>
-          </div>
-
-          <div class="fl pad1y space-right2">
-            <span class="strong">96% </span>
-            <span class="quiet">Lines</span>
-            <span class="fraction">24/25</span>
-          </div>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/formatters</a> stylish.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">96.29% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>26/27</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">90.9% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>10/11</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>7/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">96% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>24/25</span>
+            </div>
+        
+            
         </div>
         <p class="quiet">
-          Press <em>n</em> or <em>j</em> to go to the next uncovered block,
-          <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
         <template id="filterTemplate">
-          <div class="quiet">
-            Filter:
-            <input type="search" id="fileSearch" />
-          </div>
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
         </template>
-      </div>
-      <div class="status-line high"></div>
-      <pre><table class="coverage">
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -114,9 +118,7 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
@@ -156,8 +158,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,86 +173,78 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from "lodash";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'lodash'
 &nbsp;
-const INDENT = 4;
-const SIGN_INDENT_SHIFT = 2;
-const makeIndent = (depth, shift = 0) =&gt; " ".repeat(depth * INDENT - shift);
+const INDENT = 4
+const SIGN_INDENT_SHIFT = 2
+const makeIndent = (depth, shift = 0) =&gt; ' '.repeat(depth * INDENT - shift)
 &nbsp;
 const stringify = (value, depth) =&gt; {
   if (!_.isPlainObject(value)) {
-    if (value === "") return "";
-    return String(value);
+    if (value === '') return ''
+    return String(value)
   }
 &nbsp;
   const lines = Object.entries(value).map(
-    ([k, v]) =&gt; `${makeIndent(depth + 1)}${k}: ${stringify(v, depth + 1)}`
-  );
+    ([k, v]) =&gt; `${makeIndent(depth + 1)}${k}: ${stringify(v, depth + 1)}`,
+  )
 &nbsp;
-  return `{\n${lines.join("\n")}\n${makeIndent(depth)}}`;
-};
+  return `{\n${lines.join('\n')}\n${makeIndent(depth)}}`
+}
 &nbsp;
 const stylish = (ast) =&gt; {
   const iter = (nodes, depth) =&gt; {
     const lines = nodes.map((node) =&gt; {
-      const { type, key } = node;
+      const { type, key } = node
 &nbsp;
       const line = (sign, val) =&gt;
         `${makeIndent(depth, SIGN_INDENT_SHIFT)}${sign} ${key}: ${stringify(
           val,
-          depth
-        )}`;
+          depth,
+        )}`
 &nbsp;
       switch (type) {
-        case "added":
-          return line("+", node.value);
-        case "removed":
-          return line("-", node.value);
-        case "unchanged":
-          return `${makeIndent(depth)}${key}: ${stringify(node.value, depth)}`;
-        case "updated":
-          return [line("-", node.oldValue), line("+", node.newValue)].join(
-            "\n"
-          );
-        case "nested":
+        case 'added':
+          return line('+', node.value)
+        case 'removed':
+          return line('-', node.value)
+        case 'unchanged':
+          return `${makeIndent(depth)}${key}: ${stringify(node.value, depth)}`
+        case 'updated':
+          return [line('-', node.oldValue), line('+', node.newValue)].join('\n')
+        case 'nested':
           return `${makeIndent(depth)}${key}: ${`{\n${iter(
             node.children,
-            depth + 1
-          )}\n${makeIndent(depth)}}`}`;
+            depth + 1,
+          )}\n${makeIndent(depth)}}`}`
 <span class="branch-5 cbranch-no" title="branch not covered" >        default:</span>
-<span class="cstat-no" title="statement not covered" >          throw new Error(`Unknown node type: ${type}`);</span>
+<span class="cstat-no" title="statement not covered" >          throw new Error(`Unknown node type: ${type}`)</span>
       }
-    });
-    return lines.join("\n");
-  };
+    })
+    return lines.join('\n')
+  }
 &nbsp;
-  return `{\n${iter(ast, 1)}\n}`;
-};
+  return `{\n${iter(ast, 1)}\n}`
+}
 &nbsp;
-export default stylish;
+export default stylish
 &nbsp;</pre></td></tr></table></pre>
 
-      <div class="push"></div>
-      <!-- for sticky footer -->
-    </div>
-    <!-- /wrapper -->
-    <div class="footer quiet pad2 space-top1 center small">
-      Code coverage generated by
-      <a
-        href="https://istanbul.js.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >istanbul</a
-      >
-      at 2025-08-28T15:42:44.007Z
-    </div>
-    <script src="../../prettify.js"></script>
-    <script>
-      window.onload = function () {
-        prettyPrint()
-      }
-    </script>
-    <script src="../../sorter.js"></script>
-    <script src="../../block-navigation.js"></script>
-  </body>
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-08-28T20:43:01.223Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
 </html>
+    

@@ -5,7 +5,7 @@ import buildAst from './buildAst.js'
 import getFormatter from './formatters/index.js'
 import parse from './parsers.js'
 
-const readFile = filepath => {
+const readFile = (filepath) => {
   const fullPath = path.resolve(process.cwd(), filepath)
   return fs.readFileSync(fullPath, 'utf-8')
 }

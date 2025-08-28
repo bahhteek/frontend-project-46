@@ -6,7 +6,7 @@ const isObject = val => _.isPlainObject(val)
 const buildAst = (obj1, obj2) => {
   const keys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)))
 
-  return keys.map(key => {
+  return keys.map((key) => {
     const v1 = obj1[key]
     const v2 = obj2[key]
     const has1 = _.has(obj1, key)
