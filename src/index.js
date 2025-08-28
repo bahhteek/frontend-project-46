@@ -1,11 +1,12 @@
 import fs from "fs";
 import _ from "lodash";
 import path from "path";
+import parse from "./parsers.js";
 
 const getFileData = (filepath) => {
   const fullPath = path.resolve(process.cwd(), filepath);
   const data = fs.readFileSync(fullPath, "utf-8");
-  return JSON.parse(data);
+  return parse(filepath, data);
 };
 
 const genDiff = (filepath1, filepath2) => {
@@ -13,7 +14,7 @@ const genDiff = (filepath1, filepath2) => {
   const data2 = getFileData(filepath2);
 
   const keys = _.sortBy(_.union(Object.keys(data1), Object.keys(data2)));
-  
+
   const result = keys.map((key) => {
     if (_.has(data1, key) && _.has(data2, key)) {
       if (_.isEqual(data1[key], data2[key])) {

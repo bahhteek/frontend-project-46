@@ -19,3 +19,12 @@ test("gendiff json", () => {
     expected.trim().replace(/\r\n/g, "\n")
   );
 });
+
+test("gendiff yaml", () => {
+  const filepath1 = getFixturePath("file1.yml");
+  const filepath2 = getFixturePath("file2.yml");
+  const expected = readFile("expected.txt");
+  expect(genDiff(filepath1, filepath2).trim().replace(/\r\n/g, "\n")).toEqual(
+    expected.trim().replace(/\r\n/g, "\n")
+  );
+});
