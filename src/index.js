@@ -2,7 +2,7 @@
 import fs from "fs";
 import path from "path";
 import buildAst from "./buildAst.js";
-import stylish from "./formatters/stylish.js";
+import getFormatter from "./formatters/index.js";
 import parse from "./parsers.js";
 
 const readFile = (filepath) => {
@@ -11,10 +11,6 @@ const readFile = (filepath) => {
 };
 
 const getExt = (filepath) => path.extname(filepath).toLowerCase();
-
-const formatters = {
-  stylish,
-};
 
 const genDiff = (filepath1, filepath2, format = "stylish") => {
   const data1 = readFile(filepath1);
@@ -25,9 +21,7 @@ const genDiff = (filepath1, filepath2, format = "stylish") => {
 
   const ast = buildAst(parsed1, parsed2);
 
-  const formatter = formatters[format];
-  if (!formatter) throw new Error(`Unknown format: ${format}`);
-
+  const formatter = getFormatter(format);
   return formatter(ast);
 };
 
