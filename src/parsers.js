@@ -1,9 +1,7 @@
+// src/parsers.js
 import yaml from "js-yaml";
-import path from "path";
 
-const parse = (filepath, data) => {
-  const ext = path.extname(filepath);
-
+const parse = (data, ext) => {
   switch (ext) {
     case ".json":
       return JSON.parse(data);
@@ -11,7 +9,7 @@ const parse = (filepath, data) => {
     case ".yaml":
       return yaml.load(data);
     default:
-      throw new Error(`Unsupported file format: ${ext}`);
+      throw new Error(`Unknown extension: ${ext}`);
   }
 };
 
